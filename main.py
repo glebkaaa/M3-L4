@@ -17,7 +17,7 @@ def send_email():
         env = Environment(loader=FileSystemLoader('.'))
         template = env.get_template('templates/result.html')
 
-        # read the image
+        # read an image
         with open(f'static/img/{selected_image}', 'rb') as f:
             image_data = f.read()
         image = MIMEImage(image_data, name=f'{selected_image}')
