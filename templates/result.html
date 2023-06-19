@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  {% block content %}
+  <div class="meme-block" id="memeBlock">
+      
+    <p class="text_top" style="color: {{selected_color}}; top: {{ text_top_y }}px">
+      {{ text_top }}
+    </p>
+
+    <img class="meme" src="{{ selected_image }}" alt="{{ selected_image }}">
+
+    <p class="text_bottom" style="color: {{selected_color}}; bottom: {{ text_bottom_y }}px">
+      {{ text_bottom }}
+    </p>
+  </div>
+  {% endblock %}
+</body>
+</html>
