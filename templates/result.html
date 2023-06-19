@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
-  {% block content %}
-  <div class="meme-block" id="memeBlock">
-      
-    <p class="text_top" style="color: {{selected_color}}; top: {{ text_top_y }}px">
-      {{ text_top }}
-    </p>
-
-    <img class="meme" src="{{ selected_image }}" alt="{{ selected_image }}">
-
-    <p class="text_bottom" style="color: {{selected_color}}; bottom: {{ text_bottom_y }}px">
-      {{ text_bottom }}
-    </p>
-  </div>
-  {% endblock %}
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		{% block content %}
+		<ul>
+			<li>Выбранное изображение: прикреплено</li>
+			<li>Текст сверху: {{ text_top }}</li>
+			<li>Текст снизу: {{ text_bottom }}</li>
+			<li>Позиция текст сверху: {{ text_top_y }}px</li>
+			<li>Позиция текст снизу: {{ text_bottom_y }}px</li>
+			<li>Выбранный цвет: {{ selected_color }}</li>
+			<li>E-mail: {{ email }}</li>
+		</ul>
+		{% endblock %}
+	</body>
 </html>

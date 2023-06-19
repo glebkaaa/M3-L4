@@ -5,8 +5,7 @@ name = "pypi"
 
 [packages]
 flask = "*"
-bs4 = "*"
-requests = "*"
+translate = "*"
 
 [dev-packages]
 
